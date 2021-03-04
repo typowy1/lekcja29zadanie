@@ -26,21 +26,24 @@ public class AuthController {
         String username = user.getUsername();
         String password = user.getPassword();
         userService.registerUser(username, password);
-        return "redirect:/login";
+
+        boolean showSuccesMessage = false;
+        if (error == null) {
+            showSuccesMessage = true;
+        }
+        model.addAttribute("showSuccesMessage", showSuccesMessage);
+
+        return "login";
     }
 
     @GetMapping("/login")
     public String loginForm(@RequestParam(required = false) String error, Model model) {
         boolean showErrorMessage = false;
-        boolean showSuccesMessage = false;
 
         if (error != null) {
             showErrorMessage = true;
-        } else {
-            showSuccesMessage = true;
         }
         model.addAttribute("showErrorMessage", showErrorMessage);
-        model.addAttribute("showSuccesMessage", showSuccesMessage);
         return "login";
     }
 
