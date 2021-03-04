@@ -33,7 +33,7 @@ public class AuthController {
         }
         model.addAttribute("showSuccesMessage", showSuccesMessage);
 
-        return "redirect:/login";
+        return "/login";
     }
 
     @GetMapping("/login")
