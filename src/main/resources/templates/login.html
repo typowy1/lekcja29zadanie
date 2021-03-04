@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">>
+<head>
+    <meta charset="UTF-8">
+    <title>Rejestracja</title>
+</head>
+<body>
+
+<h1>Logowanie</h1>
+
+<p th:if="${showSuccesMessage}">Jesteś zarejestrowany</p>
+
+<p th:if="${showErrorMessage}">Niepoprawne logowanie!</p>
+
+<form th:action="@{/logowanie}" method="post">
+    <input name="username" placeholder="Username"/> <br/>
+    <input name="password" placeholder="Password"/> <br/>
+    <input type="submit" value="Login"/>
+</form>
+
+</body>
+</html>
