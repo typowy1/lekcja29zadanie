@@ -1,22 +1,46 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns:th="http://www.thymeleaf.org">>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Rejestracja</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
 
-<h1>Logowanie</h1>
+<!--<h1>Logowanie</h1>-->
 
-<p th:if="${showSuccesMessage}">Jesteś zarejestrowany</p>
+<!--<p th:if="${showSuccesMessage}">Brawo jesteś zarejestrowany!</p>-->
 
-<p th:if="${showErrorMessage}">Niepoprawne logowanie!</p>
+<!--<p th:if="${showErrorMessage}">Niepoprawne logowanie!</p>-->
 
-<form th:action="@{/logowanie}" method="post">
-    <input name="username" placeholder="Username"/> <br/>
-    <input name="password" placeholder="Password"/> <br/>
-    <input type="submit" value="Login"/>
-</form>
+<!--<form th:action="@{/logowanie}" method="post">-->
+<!--    <input name="username" placeholder="Username"/> <br/>-->
+<!--    <input name="password" placeholder="Password"/> <br/>-->
+<!--    <input type="submit" value="Login"/>-->
+<!--</form>-->
+
+
+<div style="margin: auto; width: 100%; max-width: 1000px;">
+    <h1 >Logowanie</h1>
+
+    <p th:if="${showSuccesMessage}">Brawo jesteś zarejestrowany!</p>
+
+    <p th:if="${showErrorMessage}">Niepoprawne logowanie!</p>
+
+    <form class="form" th:action="@{/logowanie}" method="post">
+        <div class="mb-3">
+            <label for="Username" class="form-label">Username</label>
+            <input name="username" placeholder="Username" class="form-control" id="Username">
+        </div>
+        <div class="mb-3">
+            <label for="Username" class="form-label">Password</label>
+            <input name="password" placeholder="Password" class="form-control" id="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Zaloguj się</button>
+    </form>
+</div>
 
 </body>
 </html>
