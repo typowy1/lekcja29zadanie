@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">>
 <head>
     <meta charset="UTF-8">
     <title>Edit</title>
@@ -9,12 +9,23 @@
 <body>
 
 <div style="margin: auto; width: 100%; max-width: 1000px;">
-
     <a href="/logout">Wyloguj</a></br>
-    <h2>Edycja danych</h2>
+    <h2>Edycja danych</h2></br>
 
+<!--    <form class="form" method="post" th:action="@{/user/edit}" th:object="${user}">-->
+<!--        <div class="mb-3">-->
+<!--            <label for="Username" class="form-label">Username</label>-->
+<!--            <p th:errors="*{username}">Username errors</p>-->
+<!--            <input th:field="*{username}" type="text" placeholder="Username" class="form-control" id="Username">-->
+<!--        </div>-->
+<!--        <div class="mb-3">-->
+<!--            <label for="Password" class="form-label">Password</label>-->
+<!--            <p th:errors="*{password}">Password errors</p>-->
+<!--            <input th:field="*{password}" type="text" placeholder="Password" class="form-control" id="Password">-->
+<!--        </div>-->
+<!--        <button type="submit" class="btn btn-primary">Zarejestryj się</button>-->
+<!--    </form>-->
 </div>
-</a></br>
 
 </body>
 </html>

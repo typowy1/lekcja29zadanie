@@ -57,4 +57,12 @@ public class AuthController {
     public String editPage() {
         return "edit";
     }
+
+//    @PostMapping("/user/edit")
+//    public String editUser(User user) {
+//        String username = user.getUsername();
+//        String password = user.getPassword();
+//        userService.updateCurrentUser(username, password);
+//        return "redirect:/user";
+//    }
 }

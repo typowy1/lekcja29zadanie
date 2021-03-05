@@ -42,4 +42,16 @@ public class UserService {
                 .filter(user -> !user.getUsername().equals(currentUser.getName()))
                 .collect(Collectors.toList());
     }
+
+//    public void updateCurrentUser(String username, String password) {
+//        Authentication currentUser = SecurityContextHolder.getContext().getAuthentication();
+//
+//        List<User> users = userRepository.findAll();
+//        for (User user : users) {
+//            if (user.getUsername().equals(currentUser.getName())) {
+//                user.setUsername(username);
+//                user.setPassword(password);
+//            }
+//        }
+//    }
 }
