@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div style="margin: auto; width: 100%; max-width: 1000px;">
+
+    <a href="/logout">Wyloguj</a></br>
+    <h1>Panel admina</h1></br>
+
+    <h2>Lista użytkowników</h2>
+
+    <ul>
+        <li th:each="user: ${users}">
+            <span th:text="${user.username}"></span>
+        </li>
+    </ul>
+
+</div>
+</a></br>
+
+</body>
+</html>
