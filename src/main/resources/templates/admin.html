@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Admin</title>
@@ -9,8 +9,17 @@
 <body>
 
 <div style="margin: auto; width: 100%; max-width: 1000px;">
-    <h2>Cześć</h2></br>
-    <a href="/logout">Wyloguj</a>
+
+    <a href="/logout">Wyloguj</a></br>
+    <h1>Panel admina</h1></br>
+
+    <h2>Lista użytkowników</h2>
+
+    <ul>
+        <li th:each="user: ${users}">
+            <span th:text="${user.username}"></span>
+        </li>
+    </ul>
 
 </div>
 </a></br>

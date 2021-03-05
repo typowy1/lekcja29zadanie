@@ -49,7 +49,7 @@ public class AuthController {
     }
 
     @GetMapping("/user")
-    public String homepage() {
+    public String userPage() {
         return "user";
     }
 

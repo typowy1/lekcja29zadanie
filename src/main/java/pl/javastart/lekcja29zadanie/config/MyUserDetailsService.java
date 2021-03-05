@@ -9,7 +9,6 @@ import pl.javastart.lekcja29zadanie.user.User;
 import pl.javastart.lekcja29zadanie.user.UserRepository;
 
 import javax.transaction.Transactional;
-import java.util.Collection;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
