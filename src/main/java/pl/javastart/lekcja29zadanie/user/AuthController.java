@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class AuthController {
@@ -22,7 +23,7 @@ public class AuthController {
     }
 
     @PostMapping("/registration")
-    public String register(User user, Model model, @RequestParam(required = false) String error) {
+    public String register(User user, RedirectAttributes redirectAttrs, @RequestParam(required = false) String error) {
         String username = user.getUsername();
         String password = user.getPassword();
         userService.registerUser(username, password);
@@ -31,7 +32,7 @@ public class AuthController {
         if (error == null) {
             showSuccesMessage = true;
         }
-        model.addAttribute("showSuccesMessage", showSuccesMessage);
+        redirectAttrs.addFlashAttribute("showSuccesMessage", showSuccesMessage);
 
         return "redirect:/login";
     }
