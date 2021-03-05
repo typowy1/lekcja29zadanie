@@ -33,7 +33,7 @@ public class AuthController {
         }
         model.addAttribute("showSuccesMessage", showSuccesMessage);
 
-        return "login";
+        return "redirect:/login";
     }
 
     @GetMapping("/login")
@@ -45,6 +45,11 @@ public class AuthController {
         }
         model.addAttribute("showErrorMessage", showErrorMessage);
         return "login";
+    }
+
+    @GetMapping("/user")
+    public String homepage() {
+        return "user";
     }
 
 }
