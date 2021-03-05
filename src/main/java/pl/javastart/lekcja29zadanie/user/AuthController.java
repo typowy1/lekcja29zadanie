@@ -53,4 +53,8 @@ public class AuthController {
         return "user";
     }
 
+    @GetMapping("/user/edit")
+    public String editPage() {
+        return "edit";
+    }
 }
